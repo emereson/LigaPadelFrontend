@@ -52,8 +52,7 @@ exports.createOrder = catchAsync(async (req, res, next) => {
         currency_id: 'PEN',
       },
     ],
-    notification_url:
-      'https://5bc3-190-236-82-134.sa.ngrok.io/api/v1/event/webhook',
+    notification_url: process.env.NOTIFICATION_URL,
     back_urls: {
       success: 'http://localhost:5173/#/', // URL de éxito
     },
